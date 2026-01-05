@@ -20,8 +20,8 @@ jobs:
           
       - name: Build APK
         run: |
-          # Собираем APK без лишних аргументов
-          flet build apk
+          # Команда 'echo y' автоматически нажимает "Да" при запросе установки Flutter
+          echo y | flet build apk
         
       - name: Upload APK
         uses: actions/upload-artifact@v4
